@@ -23,9 +23,9 @@ export default function Home() {
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-6 xl:py-10">
-      <div className="flex flex-col gap-6 xl:flex-row">
+      <div className="flex flex-col gap-6">
         <Sidebar />
-        <div className="flex-1 min-w-0">
+        <div className="min-w-0">
           <Navigation active={activePage} onChange={setActivePage} />
           <div className="rounded-2xl border bg-card p-6 shadow-sm sm:p-8">
             <ActiveSection />

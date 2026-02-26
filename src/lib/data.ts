@@ -1,11 +1,12 @@
 export const siteConfig = {
-  name: "Richard hanrick",
-  title: "Web developer",
+  name: "Fradipta Alqaiyum (Dip)",
+  title: "Software Engineer | Mobile | AI/ML Enthusiast",
   avatar: "/images/my-avatar.png",
-  email: "richard@example.com",
-  phone: "+1 (213) 352-2795",
-  birthday: "June 23, 1982",
-  location: "Sacramento, California, USA",
+  coverImage: "",
+  email: "fradipta.alqaiyum@gmail.com",
+  phone: "+62 812 6878-6843",
+  birthday: "January 12, 1999",
+  location: "Jakarta, Indonesia",
   socialLinks: [
     { name: "Facebook", url: "#" },
     { name: "Twitter", url: "#" },
@@ -45,36 +46,91 @@ export const services = [
   },
 ];
 
-export const testimonials = [
-  {
-    name: "Daniel lewis",
-    avatar: "/images/avatar-1.png",
-    text: "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, sedd dings eidings am am am.",
-  },
-  {
-    name: "Jessica miller",
-    avatar: "/images/avatar-2.png",
-    text: "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, sedd dings eidings am am am.",
-  },
-  {
-    name: "Emily evans",
-    avatar: "/images/avatar-3.png",
-    text: "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, sedd dings eidings am am am.",
-  },
-  {
-    name: "Henry william",
-    avatar: "/images/avatar-4.png",
-    text: "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, sedd dings eidings am am am.",
-  },
+export const techStack = [
+  { icon: "html5", name: "HTML5" },
+  { icon: "css3", name: "CSS3" },
+  { icon: "js", name: "JavaScript" },
+  { icon: "typescript", name: "TypeScript" },
+  { icon: "react", name: "React" },
+  { icon: "nextjs2", name: "Next.js" },
+  { icon: "tailwindcss", name: "Tailwind CSS" },
+  { icon: "nodejs", name: "Node.js" },
+  { icon: "figma", name: "Figma" },
+  { icon: "git", name: "Git" },
 ];
 
-export const clients = [
-  { logo: "/images/logo-1-color.png", name: "Client 1" },
-  { logo: "/images/logo-2-color.png", name: "Client 2" },
-  { logo: "/images/logo-3-color.png", name: "Client 3" },
-  { logo: "/images/logo-4-color.png", name: "Client 4" },
-  { logo: "/images/logo-5-color.png", name: "Client 5" },
-  { logo: "/images/logo-6-color.png", name: "Client 6" },
+export const techStackCategories = [
+  {
+    label: "Web Dev",
+    emoji: "🌐",
+    techs: [
+      { icon: "html5", name: "HTML5" },
+      { icon: "css3", name: "CSS3" },
+      { icon: "js", name: "JavaScript" },
+      { icon: "typescript", name: "TypeScript" },
+      { icon: "react", name: "React" },
+      { icon: "nextjs2", name: "Next.js" },
+      { icon: "tailwindcss", name: "Tailwind" },
+      { icon: "sass", name: "Sass" },
+      { icon: "vuejs", name: "Vue.js" },
+      { icon: "shadcnui", name: "shadcn/ui" },
+    ],
+  },
+  {
+    label: "Mobile",
+    emoji: "📱",
+    techs: [
+      { icon: "flutter", name: "Flutter" },
+      { icon: "dart", name: "Dart" },
+      { icon: "expo", name: "Expo" },
+      { icon: "swift", name: "Swift" },
+      { icon: "kotlin", name: "Kotlin" },
+      { icon: "android", name: "Android" },
+    ],
+  },
+  {
+    label: "AI Tools",
+    emoji: "🤖",
+    techs: [
+      { icon: "python", name: "Python" },
+      { icon: "openai", name: "OpenAI" },
+      { icon: "anthropic", name: "Anthropic" },
+      { icon: "huggingface", name: "HuggingFace" },
+      { icon: "langchain", name: "LangChain" },
+      { icon: "pytorch", name: "PyTorch" },
+      { icon: "gemini", name: "Gemini" },
+      { icon: "deepseek", name: "DeepSeek" },
+    ],
+  },
+  {
+    label: "DevOps",
+    emoji: "⚙️",
+    techs: [
+      { icon: "docker", name: "Docker" },
+      { icon: "kubernetes", name: "Kubernetes" },
+      { icon: "git", name: "Git" },
+      { icon: "github", name: "GitHub" },
+      { icon: "linux", name: "Linux" },
+      { icon: "aws", name: "AWS" },
+      { icon: "vercel", name: "Vercel" },
+      { icon: "gcloud", name: "GCP" },
+      { icon: "terraform", name: "Terraform" },
+    ],
+  },
+  {
+    label: "Backend",
+    emoji: "🗄️",
+    techs: [
+      { icon: "nodejs", name: "Node.js" },
+      { icon: "expressjs", name: "Express" },
+      { icon: "postgresql", name: "PostgreSQL" },
+      { icon: "mongodb", name: "MongoDB" },
+      { icon: "redis", name: "Redis" },
+      { icon: "graphql", name: "GraphQL" },
+      { icon: "prisma", name: "Prisma" },
+      { icon: "django", name: "Django" },
+    ],
+  },
 ];
 
 export const education = [
@@ -128,9 +184,9 @@ export const skills = [
 
 export type ProjectCategory =
   | "All"
-  | "Web design"
+  | "Web-app"
   | "Applications"
-  | "Web development";
+  | "AI/RAG";
 
 export const projects = [
   {
@@ -138,102 +194,32 @@ export const projects = [
     category: "Web development" as ProjectCategory,
     image: "/images/project-1.jpg",
   },
-  {
-    title: "Orizon",
-    category: "Web development" as ProjectCategory,
-    image: "/images/project-2.png",
-  },
-  {
-    title: "Fundo",
-    category: "Web design" as ProjectCategory,
-    image: "/images/project-3.jpg",
-  },
-  {
-    title: "Brawlhalla",
-    category: "Applications" as ProjectCategory,
-    image: "/images/project-4.png",
-  },
-  {
-    title: "DSM.",
-    category: "Web design" as ProjectCategory,
-    image: "/images/project-5.png",
-  },
-  {
-    title: "MetaSpark",
-    category: "Web design" as ProjectCategory,
-    image: "/images/project-6.png",
-  },
-  {
-    title: "Summary",
-    category: "Web development" as ProjectCategory,
-    image: "/images/project-7.png",
-  },
-  {
-    title: "Task Manager",
-    category: "Applications" as ProjectCategory,
-    image: "/images/project-8.jpg",
-  },
-  {
-    title: "Arrival",
-    category: "Web development" as ProjectCategory,
-    image: "/images/project-9.png",
-  },
+  
 ];
 
 export const blogPosts = [
   {
-    title: "Design conferences in 2022",
+    title: "Hacktiv8 x IBM Skillsbuild Developer Initiative Instructor",
     category: "Design",
     date: "Feb 23, 2022",
     image: "/images/blog-1.jpg",
+    url: "https://www.ibm.com/skillsbuild",
     description:
-      "Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.",
-  },
-  {
-    title: "Best fonts every designer",
-    category: "Design",
-    date: "Feb 23, 2022",
-    image: "/images/blog-2.jpg",
-    description:
-      "Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.",
-  },
-  {
-    title: "Design digest #80",
-    category: "Design",
-    date: "Feb 23, 2022",
-    image: "/images/blog-3.jpg",
-    description:
-      "Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.",
-  },
-  {
-    title: "UI interactions of the week",
-    category: "Design",
-    date: "Feb 23, 2022",
-    image: "/images/blog-4.jpg",
-    description:
-      "Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.",
-  },
-  {
-    title: "The forgotten art of spacing",
-    category: "Design",
-    date: "Feb 23, 2022",
-    image: "/images/blog-5.jpg",
-    description:
-      "Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    title: "Design digest #79",
-    category: "Design",
-    date: "Feb 23, 2022",
-    image: "/images/blog-6.jpg",
-    description:
-      "Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.",
-  },
+      `Program ini memberikan akses ke kurikulum AI, data, dan cloud milik IBM, dikombinasikan dengan mentoring serta pembelajaran berbasis proyek. Mahasiswa dan pengajar membangun keterampilan praktis melalui guided self-study, sesi pembelajaran langsung, dan proyek portofolio yang membantu meningkatkan kepercayaan diri dalam menggunakan teknologi baru.
+Melalui inisiatif ini, IBM membuka akses ke kurikulum berstandar dunia bagi perguruan tinggi di Indonesia dengan dampak sebagai berikut:
+- 11.500+ mahasiswa terdaftar
+- 11.390+ peserta yang dilatih
+- 98% tingkat penyelesaian program
+- 1.361 sekolah telah terlibat
+- 38% tingkat pendaftar adalah wanita
+- 707 dosen telah terdaftar`,
+  }
+  
 ];
 
 export const categories: ProjectCategory[] = [
   "All",
-  "Web design",
+  "Web-app",
   "Applications",
-  "Web development",
+  "AI/RAG",
 ];

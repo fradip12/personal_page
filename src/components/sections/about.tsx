@@ -2,20 +2,30 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { aboutText, services, testimonials, clients } from "@/lib/data";
+import { aboutText, services, techStackCategories } from "@/lib/data";
+import StackIcon from "tech-stack-icons";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
 import { SectionTitle } from "@/components/section-title";
+import { cn } from "@/lib/utils";
 
 export function AboutSection() {
-  const [selectedTestimonial, setSelectedTestimonial] = useState<number | null>(
-    null
-  );
+  const [activeCategory, setActiveCategory] = useState(0);
+  const [displayCategory, setDisplayCategory] = useState(0);
+  const [isExiting, setIsExiting] = useState(false);
+  const [gridKey, setGridKey] = useState(0);
+
+  const handleCategoryChange = (idx: number) => {
+    if (idx === activeCategory || isExiting) return;
+    setIsExiting(true);
+    setTimeout(() => {
+      setDisplayCategory(idx);
+      setActiveCategory(idx);
+      setGridKey((k) => k + 1);
+      setIsExiting(false);
+    }, 180);
+  };
+
+  const currentTechs = techStackCategories[displayCategory].techs;
 
   return (
     <div className="space-y-8">
@@ -57,83 +67,54 @@ export function AboutSection() {
         </div>
       </div>
 
-      {/* Testimonials */}
+      {/* Tech Stack */}
       <div>
-        <h3 className="mb-4 text-lg font-semibold">Testimonials</h3>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {testimonials.map((testimonial, i) => (
-            <Card
-              key={testimonial.name}
-              className="cursor-pointer border shadow-sm transition-shadow hover:shadow-md"
-              onClick={() => setSelectedTestimonial(i)}
+        <h3 className="mb-4 text-lg font-semibold">Tech Stack</h3>
+
+        {/* Category Tabs */}
+        <div className="flex flex-wrap gap-2 mb-5">
+          {techStackCategories.map((cat, idx) => (
+            <button
+              key={cat.label}
+              onClick={() => handleCategoryChange(idx)}
+              className={cn(
+                "flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer select-none",
+                activeCategory === idx
+                  ? "bg-primary text-primary-foreground shadow-sm scale-105"
+                  : "bg-muted text-muted-foreground hover:bg-muted/70 hover:text-foreground hover:scale-105"
+              )}
             >
-              <CardContent className="p-5">
-                <div className="mb-3 flex items-center gap-3">
-                  <div className="relative h-10 w-10 overflow-hidden rounded-full bg-muted">
-                    <Image
-                      src={testimonial.avatar}
-                      alt={testimonial.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <h4 className="text-sm font-semibold capitalize">
-                    {testimonial.name}
-                  </h4>
-                </div>
-                <p className="line-clamp-3 text-xs leading-relaxed text-muted-foreground">
-                  {testimonial.text}
-                </p>
-              </CardContent>
-            </Card>
+              <span>{cat.emoji}</span>
+              <span>{cat.label}</span>
+            </button>
           ))}
         </div>
 
-        <Dialog
-          open={selectedTestimonial !== null}
-          onOpenChange={() => setSelectedTestimonial(null)}
-        >
-          {selectedTestimonial !== null && (
-            <DialogContent className="sm:max-w-md">
-              <DialogHeader>
-                <div className="flex items-center gap-3">
-                  <div className="relative h-12 w-12 overflow-hidden rounded-full bg-muted">
-                    <Image
-                      src={testimonials[selectedTestimonial].avatar}
-                      alt={testimonials[selectedTestimonial].name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <DialogTitle className="capitalize">
-                    {testimonials[selectedTestimonial].name}
-                  </DialogTitle>
-                </div>
-              </DialogHeader>
-              <p className="text-sm leading-relaxed text-muted-foreground">
-                {testimonials[selectedTestimonial].text}
-              </p>
-            </DialogContent>
+        {/* Tech Icons Grid */}
+        <div
+          key={gridKey}
+          className={cn(
+            "flex flex-wrap gap-3 transition-opacity duration-150",
+            isExiting ? "opacity-0 pointer-events-none" : "opacity-100"
           )}
-        </Dialog>
-      </div>
-
-      {/* Clients */}
-      <div>
-        <h3 className="mb-4 text-lg font-semibold">Clients</h3>
-        <div className="flex flex-wrap items-center gap-6">
-          {clients.map((client) => (
+        >
+          {currentTechs.map((tech, i) => (
             <div
-              key={client.name}
-              className="relative h-8 w-auto grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all"
+              key={tech.name}
+              className="group flex flex-col items-center gap-2 cursor-default animate-in fade-in slide-in-from-bottom-3"
+              style={{ animationDelay: `${i * 45}ms`, animationFillMode: "both" }}
+              title={tech.name}
             >
-              <Image
-                src={client.logo}
-                alt={client.name}
-                width={80}
-                height={32}
-                className="h-8 w-auto object-contain"
-              />
+              {/* Icon container */}
+              <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-muted/60 p-3 transition-all duration-300 ease-out group-hover:scale-110 group-hover:bg-muted group-hover:shadow-lg group-hover:-translate-y-1.5 group-hover:shadow-primary/10">
+                <StackIcon name={tech.icon} />
+                {/* Subtle glow ring on hover */}
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-transparent group-hover:ring-primary/20 transition-all duration-300" />
+              </div>
+              {/* Label */}
+              <span className="text-[10px] font-medium text-muted-foreground group-hover:text-foreground transition-colors duration-200 max-w-[56px] text-center leading-tight">
+                {tech.name}
+              </span>
             </div>
           ))}
         </div>

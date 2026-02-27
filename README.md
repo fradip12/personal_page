@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fradip Page — Personal Portfolio
 
-## Getting Started
+> Personal portfolio website of **Fradipta Alqaiyum (Dip)** — Software Engineer (Generalist) | Mobile Specialist | AI/ML Enthusiast
 
-First, run the development server:
+## 🌐 Live Preview
+
+[![Live Preview](https://api.microlink.io/?url=https://fradip-page.vercel.app&screenshot=true&meta=false&embed=screenshot.url)](https://fradip-page.vercel.app)
+
+🔗 **[fradip-page.vercel.app](https://fradip-page.vercel.app)**
+
+---
+
+## 📖 About
+
+This is my personal portfolio site — a vCard-style single-page app showcasing my background, skills, work experience, talks, and project portfolio.
+
+Key highlights:
+- 6+ years of experience in Mobile Development (Flutter, iOS, Android)
+- AI/ML & RAG systems (LangChain, HuggingFace, n8n)
+- Web & Backend (Next.js, Node.js, TypeScript, PostgreSQL)
+- Speaker & Instructor at Google, IBM x Hacktiv8, and more
+
+---
+
+## 🛠 Tech Stack
+
+| Layer     | Tech |
+|-----------|------|
+| Framework | [Next.js 16](https://nextjs.org) (App Router) |
+| Language  | TypeScript |
+| Styling   | Tailwind CSS + shadcn/ui |
+| Font      | Poppins (Google Fonts) |
+| Deploy    | [Vercel](https://vercel.com) |
+
+---
+
+## 🚀 Run Locally
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Build & Deploy
 
-## Learn More
+```bash
+# Production build
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# Deploy to Vercel
+vercel --prod
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📬 Contact
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 📧 fradipta.alqaiyum@gmail.com
+- 💼 [LinkedIn](https://www.linkedin.com/in/dipoo/)
+- 🐙 [GitHub](https://github.com/fradip12)
+- ✍️ [Medium](https://medium.com/@fradipelz)

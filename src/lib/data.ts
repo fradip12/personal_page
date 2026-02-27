@@ -121,18 +121,28 @@ export const education = [
   {
     title: "Sepuluh Nopember Institute of Technology",
     period: "2017 — 2021",
+    favicon: "its.ac.id",
     description:
       "Bachelor of Engineering in Computer Engineering, Faculty of Informatics, Electro, and Intelligence Systems. GPA 3.31/4.0. Thesis: Automated DVT Segmentation with Convolutional Neural Network based UNet Architecture.",
   },
   {
     title: "Japanese Language Proficiency, Japan Foundation",
     period: "2024",
+    favicon: "jlpt.jp",
     description:
       "JLPT N4 certification with a score of 101/180, demonstrating proficiency in Japanese language at a basic conversational level.",
   },
   {
+  title: "Nanyang Technological University Singapore",
+  period: "Jan 2019 — Mar 2019",
+  favicon: "ntu.edu.sg",
+  description:
+    "Visited Nanyang Technological University to explore their academic process in Computer Engineering, gaining international exposure and insights into cutting-edge engineering education.",
+  },
+  {
     title: "Fundamental of Deep Learning, NVIDIA",
     period: "2019",
+    favicon: "nvidia.com",
     description:
       "Certification in deep learning fundamentals covering neural network architectures, training techniques, and practical applications in AI and machine learning.",
   },
@@ -142,42 +152,49 @@ export const experience = [
   {
     title: "Mobile Engineer — Archipelago International",
     period: "2025 — Present",
+    favicon: "archipelagohotels.com",
     description:
       "Sole mobile engineer developing a Flutter-based hotel management app used by Aston, Fave+, Neo, and more. Owns end-to-end development, CI/CD pipelines, and built a RAG-powered AI chatbot (Butlerchat) for hotel booking assistance.",
   },
   {
     title: "Mobile Engineer — Tribel (Freelance)",
     period: "2025 — Present",
+    favicon: "tribel.app",
     description:
       "Building an AI-powered travel itineraries platform for an early-stage Singapore startup. Fullstack development with Supabase, OpenAI SDK, GrokAI, and LLM orchestration.",
   },
   {
     title: "Mobile Engineer — KOLTIVA",
     period: "2023 — 2025",
+    favicon: "koltiva.com",
     description:
       "Developed supply chain management tools deployed across 65 countries. Built offline-first apps with SQLite sync, set up CI/CD pipelines, and led branching strategies for 15 contributors. Migrated native iOS and Android apps to Flutter.",
   },
   {
     title: "Instructor — HACKTIV8 (Freelance)",
     period: "2024 — 2025",
+    favicon: "hacktiv8.com",
     description:
       "Trained and mentored students and corporate employees in mobile development. Delivered courses for Kaltimtara BPD, Bithealth Indonesia, and contributed to IBM AI Programs for 6 months.",
   },
   {
     title: "Mobile Developer — Assetdata.io",
     period: "2022 — 2023",
+    favicon: "assetdata.io",
     description:
       "Developed and maintained Flutter and native Kotlin apps for asset management. Built scalable architectures with MVVM, Jetpack components, and Hilt dependency injection in an Agile cross-functional team.",
   },
   {
     title: "Mobile Developer — Minasa Fintech",
     period: "2020 — 2021",
+    favicon: "minasatech.co.id",
     description:
       "Contributed to DDS Digital startup as a mobile developer, handling full app features using Flutter, Firebase, and REST APIs with GetX state management. Started as intern, promoted to full-time.",
   },
   {
     title: "Mobile Developer Intern — Berbagi Solusi Tech",
     period: "2019",
+    favicon: "berbagisolusi.com",
     description:
       "Intern focused on UI development, API integration, and debugging for mobile apps. Also contributed to backend development using Node.js, creating WebApp APIs under senior engineer guidance.",
   },

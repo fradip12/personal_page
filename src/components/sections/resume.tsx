@@ -8,6 +8,24 @@ interface TimelineItem {
   title: string;
   period: string;
   description: string;
+  favicon?: string;
+}
+
+function TimelineIcon({ favicon, title }: { favicon?: string; title: string }) {
+  if (favicon) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={`https://www.google.com/s2/favicons?domain=${favicon}&sz=64`}
+        alt={title}
+        className="h-6 w-6 object-contain"
+        onError={(e) => {
+          (e.currentTarget as HTMLImageElement).style.display = "none";
+        }}
+      />
+    );
+  }
+  return <div className="h-4 w-4 rounded-full bg-foreground" />;
 }
 
 function Timeline({
@@ -28,7 +46,9 @@ function Timeline({
       <div className="relative ml-3 border-l border-border pl-6 space-y-6">
         {items.map((item) => (
           <div key={item.title} className="relative">
-            <div className="absolute -left-[31px] top-1.5 h-2.5 w-2.5 rounded-full bg-foreground" />
+            <div className="absolute -left-9.5 -top-0.5 h-7 w-7 flex items-center justify-center">
+              <TimelineIcon favicon={item.favicon} title={item.title} />
+            </div>
             <span className="text-xs font-medium text-muted-foreground">
               {item.period}
             </span>

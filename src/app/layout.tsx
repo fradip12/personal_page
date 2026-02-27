@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Richard hanrick - Personal Portfolio",
+  title: "Fradip Page",
   description:
     "Creative Director and UI/UX Designer from Sacramento, California",
   icons: {

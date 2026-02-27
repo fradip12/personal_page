@@ -11,7 +11,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Fradip Page",
   description:
-    "Creative Director and UI/UX Designer from Sacramento, California",
+    "Software Engineer with 5+ YoE",
   icons: {
     icon: "/images/logo.ico",
   },

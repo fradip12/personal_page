@@ -196,7 +196,15 @@ export type ProjectCategory =
   | "Applications"
   | "AI/RAG";
 
-export const projects = [
+export type Project = {
+  title: string;
+  category: ProjectCategory;
+  image: string;
+  url?: string;
+  description?: string;
+};
+
+export const projects: Project[] = [
   // {
   //   title: "Finance",
   //   category: "Web development" as ProjectCategory,

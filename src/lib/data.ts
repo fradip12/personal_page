@@ -1,177 +1,185 @@
 export const siteConfig = {
   name: "Fradipta Alqaiyum (Dip)",
-  title: "Software Engineer | Mobile | AI/ML Enthusiast",
-  avatar: "/images/my-avatar.png",
+  title: "Software Engineer (Generalist) | Mobile (Specialist) | AI/ML Enthusiast",
+  avatar: "/images/avatar-5.jpg",
   coverImage: "",
   email: "fradipta.alqaiyum@gmail.com",
   phone: "+62 812 6878-6843",
   birthday: "January 12, 1999",
   location: "Jakarta, Indonesia",
   socialLinks: [
-    { name: "Facebook", url: "#" },
-    { name: "Twitter", url: "#" },
-    { name: "Instagram", url: "#" },
+    { name: "Linkedin", url: "https://www.linkedin.com/in/dipoo/" },
+    { name: "Github", url: "https://github.com/fradip12" },
+    { name: "Medium", url: "https://medium.com/@fradipelz" },
+    { name: "Email", url: "mailto:fradipta.alqaiyum@gmail.com" },
   ],
 };
-
 export const aboutText = [
-  "I'm Creative Director and UI/UX Designer from Sacramento, California, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.",
-  "My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.",
+  "I'm a Software Engineer specializing in Mobile Development from Jakarta, Indonesia, with over 6 years of experience building Flutter and native iOS/Android applications. I enjoy turning complex business requirements into polished, performant, and user-friendly mobile experiences.",
+  "My expertise lies in crafting mobile applications with clean architecture, offline-first capabilities, and seamless API integrations — from hotel management systems and supply chain tools used across 65 countries to AI-powered travel platforms. I also bring a basic knowledge of web app and backend development with Node.js, TypeScript, and PostgreSQL, as well as hands-on experience building RAG systems and LLM-powered solutions using n8n, LangChain, and HuggingFace, backed by a foundation in machine learning and CNN models. Beyond building, I'm passionate about mentoring the next generation of developers and exploring the intersection of mobile engineering and AI. I bring a strong foundation in end-to-end development, CI/CD pipelines, and cross-platform solutions that scale.",
 ];
-
 export const services = [
   {
-    icon: "/images/icon-design.svg",
-    title: "Web design",
+    icon: "/images/icon-app.svg",
+    title: "Mobile Development",
     description:
-      "The most modern and high-quality design made at a professional level.",
+      "End-to-end mobile app development for iOS and Android using Flutter, Swift, and Kotlin — with clean architecture, offline-first support, and seamless API integrations.",
+  },
+  {
+    icon: "/images/icon-design.svg",
+    title: "AI & RAG Systems",
+    description:
+      "Building LLM-powered pipelines and RAG systems using LangChain, HuggingFace, and n8n, with experience in ML model development and AI chatbot integrations.",
   },
   {
     icon: "/images/icon-dev.svg",
-    title: "Web development",
+    title: "Web & Backend",
     description:
-      "High-quality development of sites at the professional level.",
-  },
-  {
-    icon: "/images/icon-app.svg",
-    title: "Mobile apps",
-    description:
-      "Professional development of applications for iOS and Android.",
+      "Basic web app and backend development using Node.js, TypeScript, and PostgreSQL, delivering functional APIs and lightweight server-side solutions.",
   },
   {
     icon: "/images/icon-photo.svg",
-    title: "Photography",
+    title: "CI/CD & DevOps",
     description:
-      "I make high-quality photos of any category at a professional level.",
+      "Setting up CI/CD pipelines with Fastlane and GitHub Actions, and deploying to App Store, Play Store, Firebase Distribution, and Microsoft App Center.",
   },
 ];
-
-export const techStack = [
-  { icon: "html5", name: "HTML5" },
-  { icon: "css3", name: "CSS3" },
-  { icon: "js", name: "JavaScript" },
-  { icon: "typescript", name: "TypeScript" },
-  { icon: "react", name: "React" },
-  { icon: "nextjs2", name: "Next.js" },
-  { icon: "tailwindcss", name: "Tailwind CSS" },
-  { icon: "nodejs", name: "Node.js" },
-  { icon: "figma", name: "Figma" },
-  { icon: "git", name: "Git" },
-];
-
 export const techStackCategories = [
-  {
-    label: "Web Dev",
-    emoji: "🌐",
-    techs: [
-      { icon: "html5", name: "HTML5" },
-      { icon: "css3", name: "CSS3" },
-      { icon: "js", name: "JavaScript" },
-      { icon: "typescript", name: "TypeScript" },
-      { icon: "react", name: "React" },
-      { icon: "nextjs2", name: "Next.js" },
-      { icon: "tailwindcss", name: "Tailwind" },
-      { icon: "sass", name: "Sass" },
-      { icon: "vuejs", name: "Vue.js" },
-      { icon: "shadcnui", name: "shadcn/ui" },
-    ],
-  },
   {
     label: "Mobile",
     emoji: "📱",
     techs: [
       { icon: "flutter", name: "Flutter" },
       { icon: "dart", name: "Dart" },
-      { icon: "expo", name: "Expo" },
       { icon: "swift", name: "Swift" },
       { icon: "kotlin", name: "Kotlin" },
-      { icon: "android", name: "Android" },
-    ],
-  },
-  {
-    label: "AI Tools",
-    emoji: "🤖",
-    techs: [
-      { icon: "python", name: "Python" },
-      { icon: "openai", name: "OpenAI" },
-      { icon: "anthropic", name: "Anthropic" },
-      { icon: "huggingface", name: "HuggingFace" },
-      { icon: "langchain", name: "LangChain" },
-      { icon: "pytorch", name: "PyTorch" },
-      { icon: "gemini", name: "Gemini" },
-      { icon: "deepseek", name: "DeepSeek" },
-    ],
-  },
-  {
-    label: "DevOps",
-    emoji: "⚙️",
-    techs: [
-      { icon: "docker", name: "Docker" },
-      { icon: "kubernetes", name: "Kubernetes" },
-      { icon: "git", name: "Git" },
-      { icon: "github", name: "GitHub" },
-      { icon: "linux", name: "Linux" },
-      { icon: "aws", name: "AWS" },
-      { icon: "vercel", name: "Vercel" },
-      { icon: "gcloud", name: "GCP" },
-      { icon: "terraform", name: "Terraform" },
+      { icon: "sqlite", name: "SQLite" },
+      { icon: "graphql", name: "GraphQL" },
     ],
   },
   {
     label: "Backend",
     emoji: "🗄️",
     techs: [
-      { icon: "nodejs", name: "Node.js" },
-      { icon: "expressjs", name: "Express" },
       { icon: "postgresql", name: "PostgreSQL" },
-      { icon: "mongodb", name: "MongoDB" },
+      { icon: "nodejs", name: "Node.js" },   
+      { icon: "expressjs", name: "Express" },
       { icon: "redis", name: "Redis" },
-      { icon: "graphql", name: "GraphQL" },
       { icon: "prisma", name: "Prisma" },
-      { icon: "django", name: "Django" },
+      { icon: "supabase", name: "Supabase" },
+      { icon: "firebase", name: "Firebase" },   
+
     ],
   },
-];
+  {
+    label: "DevOps",
+    emoji: "⚙️",
+    techs: [
+      { icon: "git", name: "Git" },
+      { icon: "gitlab", name: "Gitlab" },
+      { icon: "github", name: "GitHub" },
+      { icon: "github", name: "GitHub Actions" },
+      { icon: "gcloud", name: "GCP" },
+      { icon: "fastlane", name: "Fastlane" },
+      { icon: "sentry", name: "Sentry" },
+      { icon: "firebase", name: "Analytics" },
+      { icon: "firebase", name: "Crashlytics" },
 
+    ],
+  },
+  {
+    label: "Web Dev",
+    emoji: "🌐",
+    techs: [
+      { icon: "js", name: "JavaScript" },
+      { icon: "typescript", name: "TypeScript" },
+      { icon: "react", name: "React" },
+      { icon: "nextjs2", name: "Next.js" },
+      { icon: "tailwindcss", name: "Tailwind" },
+      { icon: "shadcnui", name: "shadcn/ui" },
+    ],
+  },
+  {
+    label: "AI/RAG",
+    emoji: "🤖",
+    techs: [
+      { icon: "python", name: "Python" },
+      { icon: "openai", name: "OpenAI" },
+      { icon: "cursor", name: "Cursor" },
+      { icon: "windsurf", name: "Windsurf" },
+      { icon: "anthropic", name: "Anthropic" },
+      { icon: "grok", name: "GrokAI" },
+      { icon: "huggingface", name: "HuggingFace" },
+      { icon: "langchain", name: "LangChain" },
+      { icon: "n8n", name: "n8n" },
+      { icon: "replicate", name: "Replicate" },
+    ],
+  },
+  
+];
 export const education = [
   {
-    title: "University school of the arts",
-    period: "2007 — 2008",
+    title: "Sepuluh Nopember Institute of Technology",
+    period: "2017 — 2021",
     description:
-      "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.",
+      "Bachelor of Engineering in Computer Engineering, Faculty of Informatics, Electro, and Intelligence Systems. GPA 3.31/4.0. Thesis: Automated DVT Segmentation with Convolutional Neural Network based UNet Architecture.",
   },
   {
-    title: "New york academy of art",
-    period: "2006 — 2007",
+    title: "Japanese Language Proficiency, Japan Foundation",
+    period: "2024",
     description:
-      "Ratione voluptatem sequi nesciunt, facere quisquams am am am. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "JLPT N4 certification with a score of 101/180, demonstrating proficiency in Japanese language at a basic conversational level.",
   },
   {
-    title: "High school of art and design",
-    period: "2002 — 2004",
+    title: "Fundamental of Deep Learning, NVIDIA",
+    period: "2019",
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate, quias nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "Certification in deep learning fundamentals covering neural network architectures, training techniques, and practical applications in AI and machine learning.",
   },
 ];
 
 export const experience = [
   {
-    title: "Creative director",
-    period: "2015 — Present",
+    title: "Mobile Engineer — Archipelago International",
+    period: "2025 — Present",
     description:
-      "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.",
+      "Sole mobile engineer developing a Flutter-based hotel management app used by Aston, Fave+, Neo, and more. Owns end-to-end development, CI/CD pipelines, and built a RAG-powered AI chatbot (Butlerchat) for hotel booking assistance.",
   },
   {
-    title: "Art director",
-    period: "2013 — 2015",
+    title: "Mobile Engineer — Tribel (Freelance)",
+    period: "2025 — Present",
     description:
-      "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.",
+      "Building an AI-powered travel itineraries platform for an early-stage Singapore startup. Fullstack development with Supabase, OpenAI SDK, GrokAI, and LLM orchestration.",
   },
   {
-    title: "Web designer",
-    period: "2010 — 2013",
+    title: "Mobile Engineer — KOLTIVA",
+    period: "2023 — 2025",
     description:
-      "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.",
+      "Developed supply chain management tools deployed across 65 countries. Built offline-first apps with SQLite sync, set up CI/CD pipelines, and led branching strategies for 15 contributors. Migrated native iOS and Android apps to Flutter.",
+  },
+  {
+    title: "Instructor — HACKTIV8 (Freelance)",
+    period: "2024 — 2025",
+    description:
+      "Trained and mentored students and corporate employees in mobile development. Delivered courses for Kaltimtara BPD, Bithealth Indonesia, and contributed to IBM AI Programs for 6 months.",
+  },
+  {
+    title: "Mobile Developer — Assetdata.io",
+    period: "2022 — 2023",
+    description:
+      "Developed and maintained Flutter and native Kotlin apps for asset management. Built scalable architectures with MVVM, Jetpack components, and Hilt dependency injection in an Agile cross-functional team.",
+  },
+  {
+    title: "Mobile Developer — Minasa Fintech",
+    period: "2020 — 2021",
+    description:
+      "Contributed to DDS Digital startup as a mobile developer, handling full app features using Flutter, Firebase, and REST APIs with GetX state management. Started as intern, promoted to full-time.",
+  },
+  {
+    title: "Mobile Developer Intern — Berbagi Solusi Tech",
+    period: "2019",
+    description:
+      "Intern focused on UI development, API integration, and debugging for mobile apps. Also contributed to backend development using Node.js, creating WebApp APIs under senior engineer guidance.",
   },
 ];
 
@@ -189,32 +197,87 @@ export type ProjectCategory =
   | "AI/RAG";
 
 export const projects = [
-  {
-    title: "Finance",
-    category: "Web development" as ProjectCategory,
-    image: "/images/project-1.jpg",
-  },
+  // {
+  //   title: "Finance",
+  //   category: "Web development" as ProjectCategory,
+  //   image: "/images/project-1.jpg",
+  // },
   
 ];
 
 export const blogPosts = [
   {
-    title: "Hacktiv8 x IBM Skillsbuild Developer Initiative Instructor",
-    category: "Design",
-    date: "Feb 23, 2022",
-    image: "/images/blog-1.jpg",
-    url: "https://www.ibm.com/skillsbuild",
+    title: "Google - Speakers at Google Play Academy",
+    category: "Talk",
+    date: "2025",
+    image: "/talks/google-1.jpg",
+    url: "https://www.linkedin.com/posts/kumpul_empowering-indonesias-future-developer-ugcPost-7209433359695925249-V5ng?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAC4e3bMBU7SxUsHWBE-LDdpOm8Fx-PHQG4U",
     description:
-      `Program ini memberikan akses ke kurikulum AI, data, dan cloud milik IBM, dikombinasikan dengan mentoring serta pembelajaran berbasis proyek. Mahasiswa dan pengajar membangun keterampilan praktis melalui guided self-study, sesi pembelajaran langsung, dan proyek portofolio yang membantu meningkatkan kepercayaan diri dalam menggunakan teknologi baru.
-Melalui inisiatif ini, IBM membuka akses ke kurikulum berstandar dunia bagi perguruan tinggi di Indonesia dengan dampak sebagai berikut:
-- 11.500+ mahasiswa terdaftar
-- 11.390+ peserta yang dilatih
-- 98% tingkat penyelesaian program
-- 1.361 sekolah telah terlibat
-- 38% tingkat pendaftar adalah wanita
-- 707 dosen telah terdaftar`,
-  }
-  
+      `Invited back as an alumni speaker at Google Play Academy Study Jams, one year after completing the program. Shared practical insights from my mobile engineering journey, including lessons learned in product development and career growth. Grateful to Google Indonesia for the opportunity to contribute to the developer community.`,
+  },
+  {
+    title: "Koltiva - Company Training Instructor",
+    category: "Talk",
+    date: "2024",
+    image: "/talks/koltiva-1.jpeg",
+    url: "https://www.linkedin.com/in/dipoo/",
+    description:
+      `Provide company training for mobile engineering team about mason bricks, scaffolding project with automation`,
+  },
+  {
+    title: "Online Instructor — IBM x Hacktiv8 ",
+    category: "Talk",
+    date: "2024",
+    image: "/talks/hacktiv8-3.jpeg",
+    url: "https://www.linkedin.com/in/dipoo/",
+    description:
+      `Online instructor for IBM x Hacktiv8 Generative AI for Software Development program.\n\nFacilitated live online sessions covering LLM fundamentals, prompt engineering, and AI integration in software development workflows. Guided participants through project-based learning and provided code reviews to ensure practical skill development.`,
+  },
+  {
+    title: "Offline Instructor — IBM x Hacktiv8 AI at UTA '45 Jakarta",
+    category: "Talk",
+    date: "2024",
+    image: "/talks/hacktiv8-1.jpeg",
+    url: "https://www.linkedin.com/in/dipoo/",
+    description:
+      `Offline instructor for IBM x Hacktiv8 Generative AI for Software Development program at UTA '45 University, Jakarta.\n\nConducted in-person training sessions for students and faculty, covering generative AI applications in software engineering. Emphasized applied AI tooling, API integration, and responsible AI usage.`,
+  },
+  {
+    title: "Offline co-Instructor — IBM x Hacktiv8, Faculty of Engineering at Telkom University Bandung",
+    category: "Talk",
+    date: "2025",
+    image: "/talks/hacktiv8-5.jpeg",
+    url: "https://www.linkedin.com/in/dipoo/",
+    description:
+      `Offline instructor for IBM x Hacktiv8 Generative AI for Software Development program delivered to faculty members at Telkom University Bandung.\n\nDesigned and facilitated sessions tailored for educators, focusing on embedding AI literacy and generative AI tooling into their teaching practice and academic curriculum.`,
+  },
+  {
+    title: "Offline Instructor — IBM x Hacktiv8, Faculty of Economics at Telkom University Bandung",
+    category: "Talk",
+    date: "2025",
+    image: "/talks/hacktiv8-2.jpeg",
+    url: "https://www.linkedin.com/in/dipoo/",
+    description:
+      `Offline instructor for IBM x Hacktiv8 Generative AI for Software Development program delivered to faculty members at Telkom University Bandung.\n\nDesigned and facilitated sessions tailored for educators, focusing on embedding AI literacy and generative AI tooling into their teaching practice and academic curriculum.`,
+  },
+  {
+    title: "Flutter Instructor — Hacktiv8 x Bithealth",
+    category: "Teaching",
+    date: "2024 — 2025",
+    image: "/talks/hacktiv8-4.jpeg",
+    url: "https://www.linkedin.com/in/dipoo/",
+    description:
+      `Flutter instructor at Hacktiv8 Indonesia, teaching both beginner and advanced Flutter development to students and corporate trainees.\n\nResponsibilities:\n- Taught Flutter development including basics and advanced features\n- Guided students in state management techniques and project implementation\n- Provided feedback on coding assignments and ensured practical skill development for cross-platform app building\n- Developed Flutter Intermediate level curriculum for BPD Kaltimtara project`,
+  },
+  {
+    title: "Flutter Instructor — Hacktiv8 x BPD KaltimTara",
+    category: "Teaching",
+    date: "2024 — 2025",
+    image: "/talks/hacktiv8-6.jpg",
+    url: "https://www.linkedin.com/in/dipoo/",
+    description:
+      `Develop/Teach Flutter Intermediate level curriculum for BPD Kaltimtara project`,
+  },
 ];
 
 export const categories: ProjectCategory[] = [

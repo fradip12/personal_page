@@ -31,16 +31,6 @@ export function BlogSection() {
           >
             {/* Image — clicking opens URL, not dialog */}
             <div className="relative aspect-[16/10] overflow-hidden">
-              {"url" in post && post.url ? (
-                <a
-                  href={post.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                  className="absolute inset-0 z-10"
-                  aria-label={`Open reference for ${post.title}`}
-                />
-              ) : null}
               <Image
                 src={post.image}
                 alt={post.title}

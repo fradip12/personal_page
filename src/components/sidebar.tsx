@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import dynamic from "next/dynamic";
 import { siteConfig } from "@/lib/data";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -10,16 +9,26 @@ import {
   Phone,
   Calendar,
   MapPin,
-  Facebook,
-  Twitter,
-  Instagram,
   ChevronDown,
+  Linkedin,
+  Github,
 } from "lucide-react";
 
-const DotLottieReact = dynamic(
-  () => import("@lottiefiles/dotlottie-react").then((m) => m.DotLottieReact),
-  { ssr: false }
-);
+function MediumIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+    </svg>
+  );
+}
+
+const BANNER_IMAGE =
+  "https://media.licdn.com/dms/image/v2/D5616AQH60nSx1Q5usw/profile-displaybackgroundimage-shrink_350_1400/B56ZmGmt9CJkAY-/0/1758899922274?e=1773878400&v=beta&t=hz-UKrjDsR2rogHhbl43kkX2tjt4zw3Gm1H9O6EhV4I";
 
 const contactItems = [
   {
@@ -48,9 +57,10 @@ const contactItems = [
 
 const socialIcons: Record<string, React.ComponentType<{ className?: string }>> =
   {
-    Facebook,
-    Twitter,
-    Instagram,
+    Linkedin,
+    Github,
+    Medium: MediumIcon,
+    Email: Mail,
   };
 
 export function Sidebar() {
@@ -67,20 +77,13 @@ export function Sidebar() {
               "linear-gradient(135deg, oklch(1 0 0) 0%, oklch(0.96 0 0) 50%, oklch(0.85 0 0) 100%)",
           }}
         >
-          <DotLottieReact
-            src="https://lottie.host/13a1458b-f36c-41b7-a89c-f938dfcb788f/mZJAK3kVW8.lottie"
-            autoplay
-            className="absolute inset-0 !w-full !h-full [&>canvas]:!w-full [&>canvas]:!h-full"
+          <Image
+            src={BANNER_IMAGE}
+            alt="Banner"
+            fill
+            className="object-cover"
+            priority
           />
-          {siteConfig.coverImage && (
-            <Image
-              src={siteConfig.coverImage}
-              alt="Cover photo"
-              fill
-              className="object-cover"
-              priority
-            />
-          )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
         </div>
 

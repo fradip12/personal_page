@@ -27,8 +27,7 @@ function MediumIcon({ className }: { className?: string }) {
   );
 }
 
-const BANNER_IMAGE =
-  "https://media.licdn.com/dms/image/v2/D5616AQH60nSx1Q5usw/profile-displaybackgroundimage-shrink_350_1400/B56ZmGmt9CJkAY-/0/1758899922274?e=1773878400&v=beta&t=hz-UKrjDsR2rogHhbl43kkX2tjt4zw3Gm1H9O6EhV4I";
+const BANNER_IMAGE = "/images/banner.jpg";
 
 const contactItems = [
   {

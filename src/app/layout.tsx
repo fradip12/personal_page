@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
 export const metadata: Metadata = {
-  title: "Fradip Page",
+  title: "Fradipta Alqaiyum — Software Engineer",
   description:
-    "Software Engineer with 5+ YoE",
+    "Mobile engineer building Flutter & native apps — now exploring AI. 6+ years shipping hotel, supply-chain and AI travel products.",
   icons: {
     icon: "/images/logo.ico",
   },
@@ -24,9 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} font-sans antialiased`}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

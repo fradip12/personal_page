@@ -12,7 +12,7 @@
 
 ## 📖 About
 
-This is my personal portfolio site — a vCard-style single-page app showcasing my background, skills, work experience, talks, and project portfolio.
+This is my personal portfolio site — a single-page app showcasing my background, skills, work experience, talks, and project portfolio.
 
 Key highlights:
 - 6+ years of experience in Mobile Development (Flutter, iOS, Android)
@@ -28,8 +28,9 @@ Key highlights:
 |-----------|------|
 | Framework | [Next.js 16](https://nextjs.org) (App Router) |
 | Language  | TypeScript |
-| Styling   | Tailwind CSS + shadcn/ui |
-| Font      | Poppins (Google Fonts) |
+| Styling   | Tailwind CSS v4 (design tokens in `src/app/globals.css`) |
+| UI        | Radix UI (dialog), Simple Icons (brand icons) |
+| Font      | System font stack (SF Pro on Apple devices) |
 | Deploy    | [Vercel](https://vercel.com) |
 
 ---

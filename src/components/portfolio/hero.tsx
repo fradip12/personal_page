@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { siteConfig } from "@/lib/data";
+import { DownloadMenu } from "./download-menu";
 import { pillClass } from "./ui";
 
 export function Hero() {
@@ -50,9 +51,7 @@ export function Hero() {
             <a href={`mailto:${siteConfig.email}`} className={pillClass("primary")}>
               Get in touch
             </a>
-            <a href={siteConfig.cvUrl} download className={pillClass("secondary")}>
-              Download CV
-            </a>
+            <DownloadMenu />
           </div>
         </div>
       </div>

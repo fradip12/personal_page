@@ -38,7 +38,13 @@ export function AboutSection() {
                   className={cn("flex items-start gap-4 py-4", i > 0 && "border-t border-line")}
                 >
                   <div className="flex size-12 flex-none items-center justify-center rounded-xl bg-canvas">
-                    <BrandIcon icon={item.icon} className="size-[26px]" />
+                    {item.icon ? (
+                      <BrandIcon icon={item.icon} className="size-[26px]" />
+                    ) : (
+                      <span className="text-[13px] font-semibold text-muted" aria-hidden>
+                        {item.monogram ?? item.name.charAt(0)}
+                      </span>
+                    )}
                   </div>
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-baseline justify-between gap-3">
@@ -48,16 +54,18 @@ export function AboutSection() {
                     <p className="mt-1 mb-0 text-[15px] leading-normal text-pretty text-ink-2">
                       {item.description}
                     </p>
-                    <ul className="m-0 mt-2.5 flex list-none flex-wrap gap-1.5 p-0">
-                      {item.libraries.map((lib) => (
-                        <li
-                          key={lib}
-                          className="rounded-full bg-canvas px-2.5 py-1 font-mono text-xs text-ink-2"
-                        >
-                          {lib}
-                        </li>
-                      ))}
-                    </ul>
+                    {item.libraries.length > 0 && (
+                      <ul className="m-0 mt-2.5 flex list-none flex-wrap gap-1.5 p-0">
+                        {item.libraries.map((lib) => (
+                          <li
+                            key={lib}
+                            className="rounded-full bg-canvas px-2.5 py-1 font-mono text-xs text-ink-2"
+                          >
+                            {lib}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </div>
               ))}

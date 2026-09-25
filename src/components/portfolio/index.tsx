@@ -1,6 +1,5 @@
 "use client";
 
-import type { Contributions } from "@/lib/github";
 import { siteConfig } from "@/lib/data";
 import { Header } from "./header";
 import { Hero } from "./hero";
@@ -20,7 +19,7 @@ const SECTIONS: Record<TabId, React.ComponentType> = {
   contact: ContactSection,
 };
 
-export function Portfolio({ contributions }: { contributions: Contributions | null }) {
+export function Portfolio() {
   const [active, select] = useActiveTab();
   const Section = SECTIONS[active];
 
@@ -33,7 +32,7 @@ export function Portfolio({ contributions }: { contributions: Contributions | nu
           <Hero />
           <Section />
         </main>
-        <Sidebar contributions={contributions} />
+        <Sidebar />
       </div>
 
       <footer className="mx-auto mt-10 max-w-[1080px] text-xs text-subtle">

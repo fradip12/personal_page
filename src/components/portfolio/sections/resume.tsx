@@ -1,7 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { education, experience, type TimelineEntry } from "@/lib/data";
+import {
+  certifications,
+  education,
+  experience,
+  spokenLanguages,
+  type TimelineEntry,
+} from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { Card, CardTitle } from "../ui";
 
@@ -10,6 +16,7 @@ export function ResumeSection() {
     <>
       <Timeline title="Experience" entries={experience} />
       <Timeline title="Education" entries={education} />
+      <CertificationsAndLanguages />
     </>
   );
 }
@@ -26,12 +33,53 @@ function Timeline({ title, entries }: { title: string; entries: TimelineEntry[] 
           <OrgLogo domain={e.domain} name={e.organisation} />
           <div className="min-w-0 flex-1">
             <h3 className="m-0 text-[17px] font-semibold tracking-[-0.01em]">{e.role}</h3>
-            <div className="mt-0.5 text-sm">{e.organisation}</div>
-            <div className="mt-0.5 text-[13px] text-subtle">{e.period}</div>
-            <p className="mt-2.5 mb-0 text-[15px] leading-normal text-pretty text-ink-2">{e.description}</p>
+            <div className="mt-0.5 text-sm">
+              {e.organisation}
+              {e.location && <span className="text-muted"> · {e.location}</span>}
+            </div>
+            <div className="mt-0.5 text-[13px] text-subtle">
+              {e.period}
+              {e.kind && ` · ${e.kind}`}
+            </div>
+            <ul className="mt-2.5 mb-0 flex list-disc flex-col gap-1 pl-4.5 text-[15px] leading-normal text-ink-2 marker:text-subtle">
+              {e.highlights.map((h) => (
+                <li key={h} className="text-pretty">
+                  {h}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       ))}
+    </Card>
+  );
+}
+
+function CertificationsAndLanguages() {
+  return (
+    <Card>
+      <CardTitle className="mb-2">Certifications &amp; languages</CardTitle>
+      {certifications.map((c) => (
+        <div key={c.title} className="flex gap-4 border-b border-line py-5">
+          <OrgLogo domain={c.domain} name={c.issuer} />
+          <div className="min-w-0 flex-1">
+            <h3 className="m-0 text-[17px] font-semibold tracking-[-0.01em]">{c.title}</h3>
+            <div className="mt-0.5 text-sm">{c.issuer}</div>
+            <div className="mt-0.5 text-[13px] text-subtle">
+              {c.year}
+              {c.detail && ` · ${c.detail}`}
+            </div>
+          </div>
+        </div>
+      ))}
+      <dl className="m-0 mt-5 grid grid-cols-[repeat(auto-fit,minmax(160px,1fr))] gap-3">
+        {spokenLanguages.map((l) => (
+          <div key={l.name} className="rounded-tile bg-canvas px-4 py-3">
+            <dt className="text-[15px] font-semibold">{l.name}</dt>
+            <dd className="m-0 mt-0.5 text-[13px] text-muted">{l.level}</dd>
+          </div>
+        ))}
+      </dl>
     </Card>
   );
 }

@@ -1,10 +1,14 @@
 import { siteConfig, socialLinks } from "@/lib/data";
-import type { Contributions } from "@/lib/github";
 import { cn } from "@/lib/utils";
-import { GithubActivity } from "./github-activity";
 import { BrandIcon, SideCard } from "./ui";
 
-export function Sidebar({ contributions }: { contributions: Contributions | null }) {
+const stats = [
+  { value: siteConfig.experienceYears, label: "years experience" },
+  { value: siteConfig.companies, label: "companies" },
+  { value: siteConfig.appsShipped, label: "apps shipped" },
+];
+
+export function Sidebar() {
   return (
     <aside className="flex max-w-full min-w-[260px] flex-[0_1_300px] flex-col gap-5 lg:sticky lg:top-[72px]">
       <SideCard>
@@ -19,10 +23,15 @@ export function Sidebar({ contributions }: { contributions: Contributions | null
             </dd>
           </div>
           <div>
-            <dt className="text-xs text-subtle">Phone</dt>
+            <dt className="text-xs text-subtle">WhatsApp</dt>
             <dd className="m-0">
-              <a href={`tel:${siteConfig.phone.tel}`} className="text-link">
-                {siteConfig.phone.display}
+              <a
+                href={`https://wa.me/${siteConfig.whatsapp.number}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-link"
+              >
+                {siteConfig.whatsapp.display}
               </a>
             </dd>
           </div>
@@ -60,19 +69,18 @@ export function Sidebar({ contributions }: { contributions: Contributions | null
 
       <SideCard>
         <h2 className="m-0 mb-3.5 text-[17px] font-semibold">At a glance</h2>
-        <div className="grid grid-cols-2 gap-4">
-          <div>
-            <div className="text-[28px] font-semibold tracking-[-0.02em]">{siteConfig.experienceYears}</div>
-            <div className="text-[13px] text-muted">years shipping</div>
-          </div>
-          <div>
-            <div className="text-[28px] font-semibold tracking-[-0.02em]">{siteConfig.countriesReached}</div>
-            <div className="text-[13px] text-muted">countries reached</div>
-          </div>
-        </div>
+        <dl className="m-0 grid grid-cols-3 gap-3">
+          {stats.map((st) => (
+            <div key={st.label} className="flex flex-col-reverse justify-end">
+              <dt className="text-[13px] leading-snug text-muted">{st.label}</dt>
+              <dd className="m-0 text-2xl font-semibold tracking-[-0.02em]">{st.value}</dd>
+            </div>
+          ))}
+        </dl>
+        <p className="mt-3 mb-0 text-xs text-subtle">
+          Apps shipped to the App Store, Google Play and internal distribution.
+        </p>
       </SideCard>
-
-      <GithubActivity user={siteConfig.githubUser} data={contributions} />
     </aside>
   );
 }
